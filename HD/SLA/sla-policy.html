@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configure automatic ticket assignment rules</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+</head>
+<body>
+
+<header class="kb-header">
+    <a href="../../index.html" class="kb-brand">
+        <span class="kb-brand-badge">365</span>
+        <span class="kb-brand-text">
+            <span class="kb-brand-name">Apps365</span>
+            <span class="kb-brand-sub">KNOWLEDGE BASE</span>
+        </span>
+    </a>
+    <nav class="kb-nav">
+        <a href="../../index.html">Home</a>
+        <a href="../../index.html#articles">Articles</a>
+        <a href="../../features/feature.html">Features</a>
+    </nav>
+    <div class="kb-header-actions">
+        <div class="kb-search">
+            <span>⌕</span>
+            <span>Search the knowledge base</span>
+            <kbd>⌘K</kbd>
+        </div>
+        <a class="kb-cta" href="#">Submit a ticket</a>
+    </div>
+</header>
+
+<div class="data">
+    <div class="left">
+        <div class="knowledge">
+            <span style="cursor:pointer">Knowledge Base</span>
+            <span>/</span>
+            <span>Helpdesk 365</span>
+            <span>/</span>
+            <span style="color:rgb(11,16,32)">Ticket management</span>
+        </div>
+        <div class="how">
+            <span class="howto" style="background:rgb(231,247,240);color:rgb(14,159,110)">How-to</span>
+            <span style="color:rgb(138,146,174)">5 min read · Updated 31-08-2026</span>
+        </div>
+        <h1 class="configure">Configure automatic ticket assignment rules</h1>
+        <p class="define">Automatically assign incoming tickets to the right agent or support team based on category, priority, department, or other ticket information.</p>
+        <p class="article">This article applies to Helpdesk 365 v4.2 and later on Teams + SharePoint, and assumes you administer Helpdesk 365 for your organization.</p>
+        <h2 class="begin" id="before">Before you begin</h2>
+        <div class="helping">
+            <div class="helpfirst">
+                <span style="color:rgb(47,91,255)">•</span>
+                <span>Helpdesk 365 v4.2 or later installed in your tenant</span>
+            </div>
+            <div class="helpfirst">
+                <span style="color:rgb(47,91,255)">•</span>
+                <span>Helpdesk 365 admin or site collection administrator access</span>
+            </div>
+            <div class="helpfirst">
+                <span style="color:rgb(47,91,255)">•</span>
+                <span>Support agents and teams already configured</span>
+            </div>
+            <div class="helpfirst">
+                <span style="color:rgb(47,91,255)">•</span>
+                <span>Ticket categories and departments configured, if they will be used in assignment rules</span>
+            </div>
+        </div>
+        <h2 class="steps" id="steps">Steps</h2>
+        <div class="open">
+            <div class="openfirst">
+                <div class="one">1</div>
+                <div class="opencontent">
+                    <span>1. Open Helpdesk 365 admin settings</span>
+                    <span style="color:rgb(91,100,128)">From the Helpdesk 365 home page, select the Settings icon, then go to:
+
+Admin Settings → Automation &amp; Workflows → Assignment Rules</span>
+                </div>
+            </div>
+            <div class="openfirst">
+                <div class="one">2</div>
+                <div class="opencontent">
+                    <span>2. Create a new assignment rule</span>
+                    <span style="color:rgb(91,100,128)">Select Add Rule.
+
+Enter a clear name for the rule, for example:
+
+Assign IT Hardware tickets to IT Support
+
+Add an optional description explaining when the rule should be used.</span>
+                </div>
+            </div>
+            <div class="openfirst">
+                <div class="one">3</div>
+                <div class="opencontent">
+                    <span>3. Define the conditions</span>
+                    <span style="color:rgb(91,100,128)">Select the conditions that incoming tickets must meet.
+
+For example:
+
+Category is Hardware
+Department is IT
+Priority is High
+
+You can configure one or multiple conditions depending on your support process.
+
+When multiple conditions are configured, make sure the rule logic matches the expected assignment behavior.</span>
+                </div>
+            </div>
+            <div class="openfirst">
+                <div class="one">4</div>
+                <div class="opencontent">
+                    <span>4. Configure the assignment action</span>
+                    <span style="color:rgb(91,100,128)">Under Assign To, choose the required:
+
+Support agent
+Support team
+Technician group
+
+For example:
+
+Assign To → IT Support Team
+
+If your configuration supports workload-based or round-robin assignment, select the appropriate assignment method.</span>
+                </div>
+            </div>
+            <div class="openfirst">
+                <div class="one">5</div>
+                <div class="opencontent">
+                    <span>5. Set the rule priority</span>
+                    <span style="color:rgb(91,100,128)">If multiple assignment rules could apply to the same ticket, arrange the rules in the required execution order.
+
+Place more specific rules above general rules.
+
+For example:
+
+Priority 1: Critical IT Hardware tickets
+Priority 2: All IT Hardware tickets
+Priority 3: All IT tickets</span>
+                </div>
+            </div>
+            <div class="openfirst">
+                <div class="one">6</div>
+                <div class="opencontent">
+                    <span>6. Enable the rule</span>
+                    <span style="color:rgb(91,100,128)">Turn on Active or Enable Rule.
+
+Select Save to apply the configuration.
+
+New tickets matching the configured conditions will now follow the assignment rule.</span>
+                </div>
+            </div>
+        </div>
+        <h2 class="verify" id="verify">Verify the configuration</h2>
+        <p class="verifycontent">Create a test ticket that matches the rule conditions.
+
+For example:
+
+Category: Hardware
+Department: IT
+Priority: High
+
+Verify that:
+
+The ticket is created successfully
+The correct agent or team is assigned
+The assignment appears in the ticket activity
+The assigned agent receives the configured notification
+Other assignment rules do not override the expected result</p>
+        <h2 class="begin" id="trouble">Troubleshooting</h2>
+        <div class="helping">
+            <div class="helpfirst">
+                <span style="color:rgb(47,91,255)">•</span>
+                <span>Confirm that the assignment rule is enabled and that the ticket matches all configured conditions.  Also verify that a higher-priority rule is not being executed first.</span>
+            </div>
+            <div class="helpfirst">
+                <span style="color:rgb(47,91,255)">•</span>
+                <span>Ticket is assigned to the wrong team  Review the order of the assignment rules and check whether multiple rules contain overlapping conditions.  Move the more specific rule above broader rules.</span>
+            </div>
+            <div class="helpfirst">
+                <span style="color:rgb(47,91,255)">•</span>
+                <span>Assigned agent does not receive a notification  Verify that notifications are enabled for ticket assignment and confirm that the assigned user&#39;s email address is available and valid.</span>
+            </div>
+        </div>
+        <div class="helpful">
+            <div class="helpfulcontent">
+                <span style="font-weight:600">Was this article helpful?</span>
+            </div>
+            <div class="buttons">
+                <button class="thanks">Yes, thanks</button>
+                <button class="thanks">Not really</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div>
+            <span class="onthis">On this page</span>
+            <div class="onthiscontent">
+            <a class="link" href="#before">Before you begin</a>
+            <a class="link" href="#steps">Steps</a>
+            <a class="link" href="#verify">Verify the configuration</a>
+            <a class="link" href="#trouble">Troubleshooting</a>
+            </div>
+        </div>
+        <div class="apply">
+            <div class="applies">Applies to</div>
+            <div>Helpdesk 365</div>
+            <span style="color:rgb(107,116,149)">v4.2 and later</span>
+            <div class="flex">
+                <span class="sla2">Automation</span>
+                <span class="sla2">Assignment</span>
+                <span class="sla2">Tickets</span>
+            </div>
+        </div>
+        <div class="ask">
+            ✦
+            <div>Ask about this article</div>
+            <div style="color:rgb(167,176,208)">The assistant answers from this page and its related docs.</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
